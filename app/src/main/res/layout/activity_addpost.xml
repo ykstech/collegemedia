@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New Post"
+                android:id="@+id/newpost"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+              android:layout_alignParentTop="true"
+                android:layout_marginBottom="20dp"
+                />
+
+            <LinearLayout
+                android:layout_below="@+id/newpost"
+        android:id="@+id/layout_button"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Button for choosing image from gallery-->
+        <Button
+
+            android:drawableLeft="@drawable/ic_baseline_image_24"
+            android:drawableTint="#0393F4"
+            android:id="@+id/ButtonChooseImage"
+            android:text="Select"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="#0393F4"
+            />
+
+        <!--Button for uploading image-->
+        <Button
+            android:id="@+id/ButtonUploadImage"
+            android:text="Post"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+           android:textColor="#0393F4"
+            android:backgroundTint="@color/white"
+            />
+    </LinearLayout>
+            <LinearLayout
+                android:layout_below="@+id/layout_button"
+                android:id="@+id/layout_button2"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+
+                <!--Button for choosing image from gallery-->
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:id="@+id/postbtn"
+                    android:text="POST"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/selectbg"
+                    android:layout_marginLeft="10dp"
+                    android:elevation="5dp"
+
+                    android:onClick="buttonClicked"
+                    />
+
+
+
+                <!--Button for uploading image-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/eventbtn"
+                    android:text="EVENT"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:textColor="#666666"
+                    android:background="@drawable/selectbg2"
+                   android:layout_marginLeft="10dp"
+                    android:elevation="5dp"
+
+                    android:onClick="buttonClicked"
+                    />
+            </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_button2"
+        android:id="@+id/ImageNameEditText"
+        android:layout_margin="10dp"
+        android:hint="Share an article, photo or idea"
+        android:textSize="16sp"
+        android:backgroundTint="@color/white"
+
+
+
+
+
+        />
+    <!--Image View for showing image choosen from gallery-->
+<!--            <ja.burhanrashid52.photoeditor.PhotoEditorView-->
+<!--                android:id="@+id/photoEditorView"-->
+<!--                android:layout_width="350dp"-->
+<!--                android:layout_height="350dp"-->
+<!--               android:layout_below="@id/description"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:visibility="visible"-->
+<!--                 />-->
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:id="@+id/ShowImageView"
+                android:layout_below="@+id/imageremove"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:layout_below="@+id/ImageNameEditText"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+
+                android:id="@+id/imageremove"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:src="@drawable/ic_baseline_rotate_90_degrees_ccw_24"
+                android:layout_below="@+id/ImageNameEditText"
+
+                android:layout_margin="15dp"
+                android:layout_toLeftOf="@+id/imageremove"
+
+                android:id="@+id/imagerotate"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

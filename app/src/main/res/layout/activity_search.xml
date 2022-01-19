@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".searchActivity">
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/searchprogress"
+        android:visibility="visible"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/searchrl"
+        android:visibility="gone"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:hint="Search"
+        android:drawablePadding="10dp"
+        android:background="@drawable/searchbg"
+        android:layout_margin="10dp"
+        android:padding="7dp"
+        android:id="@+id/search"
+        android:drawableTint="@color/black"
+    />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontal"
+            android:layout_below="@+id/search"
+            android:scrollbars="none"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+<!--                ///All///-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:text="ALL"
+                            android:textColor="#ffffff"
+                            android:elevation="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/allbranch"
+                            android:background="@drawable/searchfilter2"
+
+                            android:paddingTop="0dp"
+                            android:paddingBottom="0dp"
+                            android:paddingLeft="0dp"
+                            android:paddingRight="0dp"
+                            android:textAllCaps="false"
+                            android:visibility="visible"
+                            android:textSize="14sp"
+
+                            android:onClick="buttonClicked"
+                            />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--            //////cse/////////-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            
+            >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="CSE"
+            android:textColor="#666666"
+            android:elevation="5dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/cse"
+            android:background="@drawable/searchfilter"
+
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:textAllCaps="false"
+            android:visibility="visible"
+                android:textSize="14sp"
+
+                android:onClick="buttonClicked"
+            />
+
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+<!--            ////////it//////////-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:text="IT"
+                        android:textColor="#666666"
+                        android:elevation="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/it"
+                        android:background="@drawable/searchfilter"
+
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+
+                        android:onClick="buttonClicked"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+<!--            /////////extc////-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:text="EXTC"
+                        android:textColor="#666666"
+                        android:elevation="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/extc"
+                        android:background="@drawable/searchfilter"
+
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+
+                        android:onClick="buttonClicked"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+<!--            ////////elpo/////-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:text="ELPO"
+                        android:textColor="#666666"
+                        android:elevation="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/elpo"
+                        android:background="@drawable/searchfilter"
+
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+
+                        android:onClick="buttonClicked"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+<!--            ////////mech//////////-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:text="MECH"
+                        android:textColor="#666666"
+                        android:elevation="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/mech"
+                        android:background="@drawable/searchfilter"
+
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+
+                        android:onClick="buttonClicked"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+<!--            ////end-->
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontal2"
+        android:layout_below="@+id/horizontal"
+        android:scrollbars="none"
+        android:layout_marginTop="5dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+            <!--                ///All year///-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:text="ALL"
+                        android:textColor="#ffffff"
+                        android:elevation="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/allyear"
+                        android:background="@drawable/searchfilter2"
+
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+
+                        android:onClick="buttonClicked"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--            //////1/////////-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:text="FIRST"
+                        android:textColor="#666666"
+                        android:elevation="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/first"
+                        android:background="@drawable/searchfilter"
+
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+
+                        android:onClick="buttonClicked"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--            ////////2//////////-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:text="SECOND"
+                        android:textColor="#666666"
+                        android:elevation="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/second"
+                        android:background="@drawable/searchfilter"
+
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+
+                        android:onClick="buttonClicked"
+
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--            /////////3////-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:text="THIRD"
+                        android:textColor="#666666"
+                        android:elevation="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/third"
+                        android:background="@drawable/searchfilter"
+
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+
+                        android:onClick="buttonClicked"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--            ////////4/////-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:text="FOURTH"
+                        android:textColor="#666666"
+                        android:elevation="5dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/fourth"
+                        android:background="@drawable/searchfilter"
+
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+
+                        android:onClick="buttonClicked"
+                        />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!--            ////end-->
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/horizontal2"
+    android:id="@+id/recyclep"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+            android:layout_marginTop="10dp"
+        />
+    </RelativeLayout>
+
+
+</RelativeLayout>

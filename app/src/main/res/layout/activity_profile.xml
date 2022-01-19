@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profileActivity">
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:id="@+id/progressbar"
+        />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainprofile"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/circularbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/profilepic"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/profilepic"
+                android:layout_alignLeft="@+id/profilepic"
+                android:layout_marginTop="15dp"
+                android:id="@+id/profilename2"
+                android:text=""
+                android:layout_marginLeft="35dp"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilepic"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:id="@+id/profilename"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:singleLine="true"
+                android:maxLength="20"
+                android:digits="abcdefghijklmnopqrstuvwxyz_"
+
+                />
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:id="@+id/verified2"
+                android:layout_toRightOf="@id/profilename"
+
+                android:layout_alignTop="@+id/profilename"
+
+                android:src="@drawable/ic_baseline_verified_24"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="1dp"
+
+               android:visibility="gone"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+
+                android:textSize="15sp"
+                android:text="Year :"
+                android:textColor="#C1000000"
+                android:layout_alignTop="@+id/year"
+                android:layout_alignBottom="@+id/year"
+                android:textAlignment="center"
+                android:id="@+id/yeartxt"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profilename"
+                android:layout_toRightOf="@+id/yeartxt"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:id="@+id/year"
+                android:enabled="false"
+                 android:dropDownWidth="wrap_content"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginLeft="0dp"
+                android:layout_toRightOf="@+id/year"
+                android:textSize="15sp"
+                android:text="Branch :"
+                android:textColor="#C1000000"
+                android:layout_alignTop="@+id/branch"
+                android:layout_alignBottom="@+id/branch"
+
+                android:id="@+id/branchtxt"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profilename"
+                android:layout_toRightOf="@+id/branchtxt"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:id="@+id/branch"
+                android:enabled="false"
+                android:gravity="center"
+                android:dropDownWidth="wrap_content"
+                android:spinnerMode="dropdown"
+
+
+
+
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/year"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:id="@+id/description"
+                android:enabled="false"
+                android:text=""
+                android:hint="write your Bio"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:textSize="16sp"
+                android:text=""
+                android:textColor="@color/black"
+                android:layout_alignTop="@id/profilepic"
+                android:id="@+id/posts"
+                android:layout_alignLeft="@+id/posttext"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_alignRight="@+id/posttext"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/profilepic"
+                android:layout_below="@+id/posts"
+                android:layout_marginTop="1dp"
+                android:textSize="16sp"
+                android:text="Posts"
+                android:textColor="@color/black"
+                android:id="@+id/posttext"
+                android:layout_marginLeft="50dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:textSize="16sp"
+                android:text=""
+                android:textColor="@color/black"
+                android:layout_alignTop="@id/profilepic"
+
+                android:textStyle="bold"
+                android:layout_alignRight="@+id/liketext"
+                android:id="@+id/likes"
+                android:textAlignment="center"
+                android:layout_alignLeft="@+id/liketext"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/posttext"
+                android:layout_below="@+id/posts"
+                android:layout_marginTop="1dp"
+                android:textSize="16sp"
+                android:text="Likes"
+                android:textColor="@color/black"
+                android:id="@+id/liketext"
+                android:layout_marginLeft="50dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textColor="@color/black"
+                android:elevation="5dp"
+                android:layout_below="@+id/description"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/editprofile"
+                android:background="@drawable/buttonbg"
+                android:textStyle="bold"
+                 android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                 android:textAllCaps="false"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/logout"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="@color/black"
+                android:elevation="5dp"
+                android:layout_below="@+id/description"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/logout"
+                android:background="@drawable/buttonbg"
+                android:textStyle="bold"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textAllCaps="false"
+                android:visibility="visible"
+                android:layout_alignParentRight="true"
+                />
+            <GridView
+                android:layout_below="@+id/editprofile"
+
+                android:id="@+id/idGVCourses"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="3"
+
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="3dp"
+                android:verticalSpacing="3dp"
+                />
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

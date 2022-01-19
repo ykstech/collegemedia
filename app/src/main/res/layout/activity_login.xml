@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="loginActivity"
+    >
+
+<!--    <include layout="@layout/toolbar"/>-->
+
+<!--    <ProgressBar-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:id="@+id/mainprogress"-->
+<!--        />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainprogress"
+        android:visibility="visible"
+        >
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_baseline_school_24"
+        android:id="@+id/iconm"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconm"
+        android:layout_centerInParent="true"
+        android:text="COLLEGEGRAM"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:text="SSGMCIANS"
+            android:layout_marginBottom="5dp"
+            android:layout_above="@+id/yks"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+
+            />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="YKS TECH"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:id="@+id/yks"
+
+        />
+    </RelativeLayout>
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainlogin"
+    android:padding="10dp"
+      android:visibility="gone"
+    android:layout_below="@+id/toolbar"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="COLLEGEGRAM"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:id="@+id/appname"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="50dp"
+
+
+        />
+
+<!--Edittext for getting users phone number-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/appname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phonelayout"
+        app:startIconDrawable="@drawable/ic_baseline_phone_24"
+        android:hint="Enter your phone"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:endIconMode="clear_text"
+        android:layout_margin="15dp"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/idEdtPhoneNumber"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+   android:maxLength="10"
+    android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--Button for getting OTP-->
+<Button
+    android:id="@+id/idBtnGetOtp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/phonelayout"
+    android:layout_margin="15dp"
+    android:text="Get OTP"
+    android:padding="10dp"
+    android:textAllCaps="true"
+    android:textColor="#ffffff"
+    android:backgroundTint="#0393F4"
+
+
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:text="Resend OTP"
+        android:textColor="#0393F4"
+
+        android:textSize="16sp"
+        android:layout_below="@+id/idBtnGetOtp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/resend"
+
+
+        />
+
+    <!--<Button-->
+<!--    android:id="@+id/resend"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_below="@id/idBtnGetOtp"-->
+<!--    android:layout_margin="10dp"-->
+<!--    android:text="resend OTP"-->
+<!--    android:textAllCaps="true" />-->
+
+<!--Edittext for getting otp from user-->
+<com.chaos.view.PinView
+    android:id="@+id/idEdtOtp"
+    android:layout_centerHorizontal="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/resend"
+    android:layout_marginHorizontal="15dp"
+    app:itemCount="6"
+    app:itemWidth="45dp"
+    app:itemHeight="45dp"
+    app:lineColor="#0393F4"
+    android:itemBackground="#FDEFEDED"
+    style="@style/PinWidget.PinView"
+    android:cursorVisible="true"
+    app:cursorColor="@color/black"
+    app:hideLineWhenFilled="true"
+    app:itemRadius="5dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:inputType="number" />
+
+
+<!--button for verifying user OTP-->
+<Button
+    android:id="@+id/idBtnVerify"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/idEdtOtp"
+    android:layout_margin="15dp"
+    android:text="Verify OTP"
+    android:textAllCaps="false"
+
+    android:padding="10dp"
+    android:textColor="#ffffff"
+    android:backgroundTint="#0393F4"
+
+    />
+
+</RelativeLayout>
+</ScrollView>
+</RelativeLayout>

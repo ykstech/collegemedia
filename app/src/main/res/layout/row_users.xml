@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+
+xmlns:android="http://schemas.android.com/apk/res/android"
+
+xmlns:app="http://schemas.android.com/apk/res-auto"
+
+android:layout_width="match_parent"
+
+android:layout_height="wrap_content"
+
+android:orientation="vertical"
+
+app:cardBackgroundColor="@color/white"
+
+app:cardCornerRadius="0dp"
+
+app:cardElevation="0dp"
+
+app:cardUseCompatPadding="false"
+
+app:contentPadding="0dp">
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_margin="0dp"
+        android:layout_below="@+id/horizontal"
+
+        >
+    <!--        ECEFF1-->
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circularbg"
+        android:layout_margin="15dp"
+        android:id="@+id/profilepic"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profilepic"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text=""
+        android:textSize="16sp"
+        android:id="@+id/namep2"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/profilepic"
+        android:layout_alignTop="@+id/profilepic"
+        android:text=""
+        android:textColor="@color/black"
+        android:id="@+id/namep"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="0dp"
+
+        />
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:id="@+id/verified"
+            android:layout_toRightOf="@id/namep"
+
+            android:layout_alignTop="@+id/profilepic"
+            android:src="@drawable/ic_baseline_verified_24"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="1dp"
+
+            android:visibility="gone"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profilepic"
+            android:layout_below="@+id/namep"
+            android:text=""
+            android:id="@+id/subyear"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="0dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/subyear"
+            android:layout_below="@+id/namep"
+            android:text=""
+            android:id="@+id/subbranch"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp"
+
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
